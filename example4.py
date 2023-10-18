@@ -24,6 +24,7 @@ data = [
 
 def writeData():
     output = json.dumps(data)
+    #print("output",output)
     filename = "dbase.txt"
     try:
         file = open(filename,'w')

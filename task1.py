@@ -10,7 +10,17 @@ assert find('apple') == 0
 assert find('fish') == 5
 '''
 def find(needle):
-    pass
+    filename='task01.txt'
+    file=open(filename, "r")
+    fileData=file.read()
+    print(fileData)
+
+    file2=fileData.split("\n")
+    print(file2)
+
+    ind= file2.index(needle)
+    return ind        
+    #pass
 
 
 if __name__ == "__main__":
