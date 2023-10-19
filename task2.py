@@ -15,24 +15,30 @@ sp1 = fileData1.split("\n")
 
 print(sp1)
 
-dict1={}
-
-
+a=len(sp1)-1
 for i in range(len(sp1)):
+    if sp1[a-i]=='':
+        sp1.pop(a-i)
+print(sp1)
+        
+
+
+
+dict1=[]
+
+
+
+
+"""for i in range(4):
     while i%4!=0:
         if i ==0:
             dict1[f"{i+1}a"]=sp1[i]
-            sp1.pop(0)
         elif i==1:
             dict1[f"{i+1}b"]=sp1[i]
-            sp1.pop(0)
         elif i==2:
             dict1[f"{i+1}c"]=sp1[i]
-            sp1.pop(0)
     if i==4:
-        sp1.pop(0)
-dict={dict1}
-print(dict)
-
+        for j in range(4):
+            dict.pop(j)"""
 
 
