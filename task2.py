@@ -4,7 +4,7 @@ The data from this file contains 3 numbers on each line.  Determine how many lin
 Pythagorean triples are numbers where all of the sides are integers, and the 3 sides form a right triangle.
 The triples contained are : { 2a : 6, 2b: 4, 2c: 11}
 """
-
+import math
 filename1='task02a.txt'
 
 file=open(filename1, "r")
@@ -34,22 +34,13 @@ print(dict)
 
 for i in range(len(dict)):
     dict[i].sort()
-    """if int(dict[i][0])>int(dict[i][1]):
-        a=int(dict[i][0])
-        dict[i][0]=int(dict[i][1])
-        dict[i][1]=a
-
-    if int(dict[i][0])>int(dict[i][2]):
-        a=int(dict[i][0])
-        dict[i][0]=int(dict[i][2])
-        dict[i][2]=a
-
-    if int(dict[i][1])>int(dict[i][2]):
-        a=int(dict[i][1])
-        dict[i][1]=int(dict[i][2])
-        dict[i][2]=a"""
-
 print(dict)
+
+pytha=[]
+for i in range(len(dict)):
+    if math.pow(dict[i][2],2)==math.pow(dict[i][0],2)+math.pow(dict[i][1],2):
+        pytha.append(dict[i])
+print(pytha)
 
 
 #print(dict)
