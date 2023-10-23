@@ -5,45 +5,64 @@ Pythagorean triples are numbers where all of the sides are integers, and the 3 s
 The triples contained are : { 2a : 6, 2b: 4, 2c: 11}
 """
 import math
-filename1='task02a.txt'
+class pytha:
+    numOpyta=0
+    
+    def file(self):
+        filename1='task02b.txt'
 
-file=open(filename1, "r")
+        file=open(filename1, "r")
 
-fileData1=file.read()
+        fileData1=file.read()
 
-sp2 = fileData1.split("\n")
+        sp2 = fileData1.split("\n")
+        return sp2
 
-a=len(sp2)-1
-for i in range(len(sp2)):
-    if sp2[a-i]=='':
-        sp2.pop(a-i)
-print(sp2)
+    def sp(self):
+        p=self.file()
+        a=len(p)-1
+        for i in range(len(p)):
+            if p[a-i]=='':
+                p.pop(a-i)
+        print(p)
+        return p
 
-dict=[]
-dict1=[]
-
-count=0
-for i in range(len(sp2)):
-    count+=1
-    dict1.append(int(sp2[i]))
-    if count==3:
-        count=0
-        dict.append(dict1)
+    def spli(self):
+        k=self.sp()
+        dict=[]
         dict1=[]
-print(dict)
 
-for i in range(len(dict)):
-    dict[i].sort()
-print(dict)
+        count=0
+        for i in range(len(k)):
+            count+=1
+            dict1.append(int(k[i]))
+            if count==3:
+                count=0
+                dict.append(dict1)
+                dict1=[]
+        print(dict)
 
-pytha=[]
-for i in range(len(dict)):
-    if math.pow(dict[i][2],2)==math.pow(dict[i][0],2)+math.pow(dict[i][1],2):
-        pytha.append(dict[i])
-print()
-print(len(pytha))
+        for i in range(len(dict)):
+            dict[i].sort()
+        print(dict)
+        return dict
+    
+    def findPy(self):
+        dict1=self.spli()
+        pytha=[]
+        for i in range(len(dict1)):
+            if math.pow(dict1[i][2],2)==math.pow(dict1[i][0],2)+math.pow(dict1[i][1],2):
+                pytha.append(dict1[i])
+        print()
+        print(pytha)
+        print(len(pytha))
+        return len(pytha)
 
-k={}
+    def __init__(self):
+        self.findPy()
+
+    
+p=pytha()
 
 
 
@@ -69,7 +88,50 @@ data= [
 
 
 
+"""def file(self, filen):
+        filename1=filen
 
+        file=open(filename1, "r")
+
+        fileData1=file.read()
+
+        sp2 = fileData1.split("\n")
+        return sp2
+
+    def sp(self):
+        a=len(sp2)-1
+        for i in range(len(sp2)):
+            if sp2[a-i]=='':
+                sp2.pop(a-i)
+        print(sp2)
+        return sp2
+
+    def spli(self):
+        dict=[]
+        dict1=[]
+
+        count=0
+        for i in range(len(sp2)):
+            count+=1
+            dict1.append(int(sp2[i]))
+            if count==3:
+                count=0
+                dict.append(dict1)
+                dict1=[]
+        print(dict)
+
+        for i in range(len(dict)):
+            dict[i].sort()
+        print(dict)
+    
+    def findPy(self):
+        pytha=[]
+        for i in range(len(dict)):
+            if math.pow(dict[i][2],2)==math.pow(dict[i][0],2)+math.pow(dict[i][1],2):
+                pytha.append(dict[i])
+        print()
+        print(len(pytha))
+        return len(pytha)"""
 
 
 
