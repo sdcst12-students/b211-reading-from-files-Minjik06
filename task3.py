@@ -6,8 +6,10 @@ The file task03.txt contains a lot of data.  Each cluster of data is the number 
 Read the contents of task03.txt into your program and determine the points value of the cluster with largest sum.
 
 For sample data task03.txt, the largest sum should be 68787
+
+from _typeshed import Self
 """
-#from _typeshed import Self
+
 
 
 class sum:
