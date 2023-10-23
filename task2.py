@@ -9,7 +9,8 @@ class pytha:
     numOpyta=0
     
     def file(self):
-        filename1='task02b.txt'
+        a=str(input('task02a.txt or task02b.txt or task02c.txt :'))
+        filename1=a
 
         file=open(filename1, "r")
 
@@ -56,6 +57,7 @@ class pytha:
         print()
         print(pytha)
         print(len(pytha))
+        self.numOpyta==len(pytha)
         return len(pytha)
 
     def __init__(self):
