@@ -40,7 +40,11 @@ pytha=[]
 for i in range(len(dict)):
     if math.pow(dict[i][2],2)==math.pow(dict[i][0],2)+math.pow(dict[i][1],2):
         pytha.append(dict[i])
-print(pytha)
+print()
+print(len(pytha))
+
+k={}
+
 
 
 #print(dict)
