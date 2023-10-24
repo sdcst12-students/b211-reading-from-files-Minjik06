@@ -12,13 +12,14 @@ Create a function that reads the specific value for a specific level and an armo
 
 """
 def file():
-    filename1='task03.txt'
+    filename1='task04.txt'
 
     file=open(filename1, "r")
 
     fileData1=file.read()
 
     sp2 = fileData1.split("\n")
+    
 
     print(sp2)
     return sp2
@@ -27,12 +28,19 @@ def target(lvl,ac):
     a=file()
     lev=[]
     lev.append(a[lvl-1])
+    lev1=lev[0]
+    am=lev1.split()
+    k=int(am[10-ac])
+    print()
+    print(k)
+
+    return k
     
   
 
 
 def tests():
-    assert target(3,7) == 23
+    assert target(3,7) == 12
     assert target(9,-1) == 17
     assert target(13,-10) == 20
 
